@@ -4,7 +4,7 @@ const { getNearbyStops } = require('./graphql/queries')
 
 const app = express()
 app.use(cors())
-const port = 8080
+const port = process.env.PORT || 8080
 
 app.post('/nearby/:lat/:lon/:radius', async (req, res) => {
   const { lat, lon, radius } = req.params
