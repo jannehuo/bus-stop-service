@@ -1,6 +1,7 @@
-const API_URL =
-  'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql'
+require('dotenv').config()
+
+const HSL_API_URL = process.env.HSL_API_URL
 
 module.exports = {
-  API_URL,
+  HSL_API_URL,
 }

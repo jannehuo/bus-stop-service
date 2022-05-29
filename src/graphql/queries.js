@@ -1,5 +1,5 @@
 const { default: axios } = require('axios')
-const { API_URL } = require('../config')
+const { HSL_API_URL } = require('../config')
 const { getByPosition, createStopsResponse } = require('../utils')
 
 const getNearbyStops = async (lat, lon, radius) => {
@@ -7,7 +7,7 @@ const getNearbyStops = async (lat, lon, radius) => {
   try {
     const results = await axios({
       method: 'POST',
-      url: API_URL,
+      url: HSL_API_URL,
       data: {
         query,
       },
